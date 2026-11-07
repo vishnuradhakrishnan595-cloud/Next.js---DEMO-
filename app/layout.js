@@ -1,5 +1,6 @@
 
 import "./globals.css";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { CartProvider } from "@/components/CartContext";
 
@@ -14,12 +15,14 @@ export default function RootLayout({ children }) {
       <body>
         <CartProvider>
           <Navbar />
+
           {children}
 
           <footer className="site-footer">
             <Link href="/" className="footer-logo">
               SHOP<span>NEST.</span>
             </Link>
+
             <p>Your everyday shopping destination.</p>
             <small>© 2026 ShopNest. All rights reserved.</small>
           </footer>
